@@ -7,22 +7,14 @@ tagline: Self-hosted blind PIN oracle for Blockstream Jade
 description: >-
   A self-hosted blind PIN oracle for the Blockstream Jade hardware wallet,
   with support for QR Pin Unlock (air-gapped operation).
-
   This is a C# / Blazor Server port of SimpleJadePinServer by Filiprogrammer.
   It reimplements the same blind oracle protocol using NBitcoin, verified
   against wallycore test vectors for compatibility.
-
-  Features:
-
-  - QR Pin Unlock for fully air-gapped wallet access
-  - Oracle QR code generation for Jade pairing
-  - Web-based interface with camera QR scanning
-  - Dark theme UI
-  - No external dependencies — fully self-contained
-
   Once configured, your Jade communicates with this server via QR codes
   to securely unlock your wallet without any network connection on the Jade.
-
+releaseNotes: >-
+  Initial release with full blind oracle protocol support,
+  QR Pin Unlock, and Oracle QR pairing.
 developer: Bitcoin-Self-Custody
 website: https://github.com/Bitcoin-Self-Custody/SimpleJadePinServer.Blazor
 repo: https://github.com/Bitcoin-Self-Custody/SimpleJadePinServer.Blazor
