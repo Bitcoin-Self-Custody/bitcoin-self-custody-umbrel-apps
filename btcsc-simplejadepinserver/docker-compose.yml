@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  # Umbrel's auth proxy — handles password protection and routing
+  app_proxy:
+    environment:
+      APP_HOST: btcsc-simplejadepinserver_web_1
+      APP_PORT: 8080
+
+  # SimpleJadePinServer Blazor app
+  web:
+    image: ghcr.io/bitcoin-self-custody/simplejadepinserver.blazor:latest@sha256:014b7801980b43808d7a97b8fc16395c99c7edae11597b4f736ffbb355b88cd7
+    restart: on-failure
+    volumes:
+      # Persistent storage for server keypair and PIN files
+      - ${APP_DATA_DIR}/data/key_data:/app/key_data
+    environment:
+      # Kestrel listens on 8080 (default in .NET 8+)
+      ASPNETCORE_URLS: "http://+:8080"
