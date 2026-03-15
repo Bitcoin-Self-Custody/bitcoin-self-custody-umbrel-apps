@@ -5,11 +5,13 @@ services:
   app_proxy:
     environment:
       APP_HOST: btcsc-simplejadepinserver_web_1
+      # Disable Umbrel auth — the app handles its own access
+      PROXY_AUTH_ADD: "false"
       APP_PORT: 8080
 
   # SimpleJadePinServer Blazor app
   web:
-    image: ghcr.io/bitcoin-self-custody/simplejadepinserver.blazor:latest@sha256:014b7801980b43808d7a97b8fc16395c99c7edae11597b4f736ffbb355b88cd7
+    image: ghcr.io/bitcoin-self-custody/simplejadepinserver.blazor:latest
     restart: on-failure
     volumes:
       # Persistent storage for server keypair and PIN files
