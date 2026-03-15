@@ -1,9 +1,10 @@
 manifestVersion: 1
 id: btcsc-simplejadepinserver
-category: bitcoin
 name: SimpleJadePinServer
+category: bitcoin
 version: "1.0.0"
 tagline: Self-hosted blind PIN oracle for Blockstream Jade
+icon: https://raw.githubusercontent.com/Bitcoin-Self-Custody/SimpleJadePinServer.Blazor/main/docs/icon.svg
 description: >-
   A self-hosted blind PIN oracle for the Blockstream Jade hardware wallet,
   with support for QR Pin Unlock (air-gapped operation).
@@ -21,8 +22,9 @@ repo: https://github.com/Bitcoin-Self-Custody/SimpleJadePinServer.Blazor
 support: https://github.com/Bitcoin-Self-Custody/SimpleJadePinServer.Blazor/issues
 port: 4443
 gallery:
-  - 1.jpg
-  - 2.jpg
+  - https://raw.githubusercontent.com/Bitcoin-Self-Custody/bitcoin-self-custody-umbrel-apps/master/btcsc-simplejadepinserver/1.jpg
+  - https://raw.githubusercontent.com/Bitcoin-Self-Custody/bitcoin-self-custody-umbrel-apps/master/btcsc-simplejadepinserver/2.jpg
+dependencies: []
 path: ""
 defaultUsername: ""
 defaultPassword: ""
